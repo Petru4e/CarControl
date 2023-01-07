@@ -20,9 +20,38 @@ namespace CarControl
     /// </summary>
     public partial class MainWindow : Window
     {
+        AppContext db;
         public MainWindow()
         {
             InitializeComponent();
+            db = new AppContext();
+
+            List<Car> cars = db.Cars.ToList();
+            string str = "";
+            foreach (Car car in cars)
+            {
+                str += $" ID = {car.id} Car {car.Number} * ";
+            }
+            BDTEXT.Text = str;
         }
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            Auto_Add auto_Add = new Auto_Add();
+            auto_Add.Show();
+            Hide();
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            Auto_Search auto_Search = new Auto_Search();
+            auto_Search.Show();
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            Auto_Delete auto_Delete = new Auto_Delete();
+            auto_Delete.Show();
+        }
+
     }
 }

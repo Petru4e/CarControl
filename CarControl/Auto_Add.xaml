@@ -1,0 +1,20 @@
+﻿<Window x:Class="CarControl.Auto_Add"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarControl"
+        mc:Ignorable="d"
+        Title="Auto_Add" Height="450" Width="800">
+    <Grid>
+        <StackPanel Background="White" Margin="40 40 40 80">
+            <TextBox x:Name="Number" materialDesign:HintAssist.Hint="Введите номер автомобиля" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
+            <TextBox x:Name="Model" materialDesign:HintAssist.Hint="Введите марку автомобиля" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
+            <TextBox x:Name="Comment" materialDesign:HintAssist.Hint="Коментарий" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
+            <TextBox x:Name="Date_Start" materialDesign:HintAssist.Hint="Дата создания заявки" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
+            <TextBox x:Name="Date_End" materialDesign:HintAssist.Hint="Дата закрытия заявки" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
+        </StackPanel>
+        <Button x:Name="Add_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" Content="Добавить" Click="Add_Btn_Click" ></Button>
+    </Grid>
+</Window>
