@@ -27,12 +27,8 @@ namespace CarControl
             db = new AppContext();
 
             List<Car> cars = db.Cars.ToList();
-            string str = "";
-            foreach (Car car in cars)
-            {
-                str += $" ID = {car.id} Car {car.Number} * ";
-            }
-            BDTEXT.Text = str;
+            autoList.ItemsSource = cars;
+            //List_Auto.ItemsSource = cars;
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
