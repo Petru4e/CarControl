@@ -8,6 +8,8 @@
         Title="Auto_Delete" Height="450" Width="800">
     <Grid>
         <TextBox x:Name="DeleteText" Margin="100"></TextBox>
-        <Button x:Name="Del_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" Content="Удалить" Click="Del_Dtn_Click" ></Button>
+        <Button x:Name="Del_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="20" Content="Удалить" Click="Del_Dtn_Click" ></Button>
+        <Button x:Name="Back_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" Content="Назад" Click="Back_Btn_Click" ></Button>
+        <Button x:Name="Change_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20" Content="Изменить" Click="Change_Btn_Click" ></Button>
     </Grid>
 </Window>

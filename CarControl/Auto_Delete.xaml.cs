@@ -27,7 +27,9 @@ namespace CarControl
         }
         private void Del_Dtn_Click(object sender, RoutedEventArgs e)
         {
+            
             Car car = db.Cars.Find(Convert.ToInt32(DeleteText.Text));
+           
             db.Cars.Remove(car);
             db.SaveChanges();
 
@@ -35,6 +37,18 @@ namespace CarControl
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             Hide();
+        }
+
+        private void Back_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Hide();
+        }
+
+        private void Change_Btn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

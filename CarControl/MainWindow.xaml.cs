@@ -28,7 +28,6 @@ namespace CarControl
 
             List<Car> cars = db.Cars.ToList();
             autoList.ItemsSource = cars;
-            //List_Auto.ItemsSource = cars;
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -47,7 +46,20 @@ namespace CarControl
         {
             Auto_Delete auto_Delete = new Auto_Delete();
             auto_Delete.Show();
+            Hide();
         }
 
+        private void autoList_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (autoList.SelectedItem != null)
+            {
+                Car li = (Car)autoList.Items[autoList.SelectedIndex];
+                MessageBox.Show(li.id.ToString());
+               
+            }
+            Auto_Delete auto_Delete = new Auto_Delete();
+            auto_Delete.Show();
+            Hide();
+        }
     }
 }

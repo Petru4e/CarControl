@@ -21,31 +21,16 @@
         <Button x:Name="Add" Grid.Column="2" Grid.Row="0" Margin="20" Click="Add_Click">Добавить</Button>
         <Button x:Name="Search" Grid.Column="2" Grid.Row="1" Margin="20" Click="Search_Click">Поиск по номеру</Button>
         <Button x:Name="Delete" Grid.Column="2" Grid.Row="2" Margin="20" Click="Delete_Click">Удалить</Button>
-        <StackPanel  Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
-            <TextBlock Grid.ColumnSpan="2" Margin="20" VerticalAlignment="Top" FontSize="20" FontWeight="Bold">Заявки</TextBlock>
-            <ListBox x:Name="autoList" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="20 20 20 20 ">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
+        <TextBlock Grid.ColumnSpan="2" Margin="20" VerticalAlignment="Top" FontSize="20" FontWeight="Bold">Заявки</TextBlock>
+        <ListBox x:Name="autoList" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="20 60 20 20 " MouseUp="autoList_MouseUp" x:FieldModifier="public" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
                         <TextBlock FontSize="16" FontStyle="Italic" FontFamily="Arial Black" FontWeight="Bold"  Text="{Binding id}"></TextBlock>
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Number}"></TextBlock>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            <!--<ListView x:Name="List_Auto" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="20 20 20 20 ">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <WrapPanel>
-                            <TextBlock Text="{Binding id}"/>
-                            <TextBlock Text=", "/>
-                            <TextBlock Text="{Binding Number}"/>
-                            <TextBlock Text=", "/>
-                            <TextBlock Text="{Binding Model}"/>
-                        </WrapPanel>
+                    </StackPanel>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>-->
-        </StackPanel>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
