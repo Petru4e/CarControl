@@ -27,7 +27,6 @@ namespace CarControl
         }
         private void Del_Dtn_Click(object sender, RoutedEventArgs e)
         {
-            
             Car car = db.Cars.Find(Convert.ToInt32(DeleteText.Text));
            
             db.Cars.Remove(car);
