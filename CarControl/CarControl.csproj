@@ -87,14 +87,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Auto_Delete.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Auto_Search.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -106,12 +98,6 @@
     <Compile Include="AppContext.cs" />
     <Compile Include="Auto_Add.xaml.cs">
       <DependentUpon>Auto_Add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Auto_Delete.xaml.cs">
-      <DependentUpon>Auto_Delete.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Auto_Search.xaml.cs">
-      <DependentUpon>Auto_Search.xaml</DependentUpon>
     </Compile>
     <Compile Include="Car.cs" />
     <Compile Include="MainWindow.xaml.cs">

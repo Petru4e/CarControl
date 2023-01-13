@@ -12,8 +12,12 @@
             <TextBox x:Name="Number" materialDesign:HintAssist.Hint="Введите номер автомобиля" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
             <TextBox x:Name="Model" materialDesign:HintAssist.Hint="Введите марку автомобиля" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
             <TextBox x:Name="Comment" materialDesign:HintAssist.Hint="Коментарий" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
-            <TextBox x:Name="Date_Start" materialDesign:HintAssist.Hint="Дата создания заявки" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
-            <TextBox x:Name="Date_End" materialDesign:HintAssist.Hint="Дата закрытия заявки" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
+            <!--<TextBox x:Name="Date_Start" materialDesign:HintAssist.Hint="Дата создания заявки" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>-->
+            <!--<TextBox x:Name="Date_End" materialDesign:HintAssist.Hint="Дата закрытия заявки" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"></TextBox>-->
+            <TextBlock Margin="10" Foreground="Gray">Дата создания заявки</TextBlock>
+            <DatePicker Name="Start_Date" IsDropDownOpen="True" SelectedDateFormat="Short" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"  Foreground="Gray" />
+            <TextBlock Margin="10"  Foreground="Gray">Дата окончания заявки</TextBlock>
+            <DatePicker Name="End_Date" IsDropDownOpen="True" SelectedDateFormat="Short" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"  Foreground="Gray"/>
         </StackPanel>
         <Button x:Name="Add_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" Content="Добавить" Click="Add_Btn_Click" ></Button>
     </Grid>

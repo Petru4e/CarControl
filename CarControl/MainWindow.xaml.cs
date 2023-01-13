@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace CarControl
 {
     /// <summary>
@@ -38,15 +39,19 @@ namespace CarControl
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            Auto_Search auto_Search = new Auto_Search();
-            auto_Search.Show();
+
+            Car car = db.Cars.Find(Convert.ToInt32(Search_Number.Text));
+            if (car != null)
+                MessageBox.Show($"{car.id.ToString()} найдено");
+            else
+                MessageBox.Show($"Не найдено");
+
+
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            //Auto_Delete auto_Delete = new Auto_Delete();
-            //auto_Delete.Show();
-            //Hide();
+
             if (autoList.SelectedItem != null)
             {
                 if (autoList.SelectedItem != null)
@@ -72,13 +77,8 @@ namespace CarControl
             if (autoList.SelectedItem != null)
             {
                 Car li = (Car)autoList.Items[autoList.SelectedIndex];
-                //MessageBox.Show(li.id.ToString());
-                
-
             }
-            //Auto_Delete auto_Delete = new Auto_Delete();
-            //auto_Delete.Show();
-            //Hide();
+
         }
     }
 }

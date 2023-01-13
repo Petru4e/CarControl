@@ -30,8 +30,10 @@ namespace CarControl
             string number = Number.Text.Trim().ToLower();
             string model = Model.Text.Trim().ToLower();
             string comment = Comment.Text;
-            string date_start = Date_Start.Text;
-            string date_end = Date_End.Text;
+            string start_date = Start_Date.Text;
+            //string date_start = Date_Start.Text;
+            string end_date = End_Date.Text;
+            //string date_end = Date_End.Text;
             if (number.Length < 3)
             {
                 Number.ToolTip = "Не корректный номер";
@@ -43,8 +45,8 @@ namespace CarControl
                 Number.Background = Brushes.Transparent;
             }
 
-            //MainWindow mainWindow = new MainWindow();
-            Car car = new Car(number, model, comment, date_start, date_end);
+            
+            Car car = new Car(number, model, comment, start_date, end_date);
 
             db.Cars.Add(car);
             db.SaveChanges();
