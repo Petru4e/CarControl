@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarControl"
         mc:Ignorable="d"
-        Title="CarControl" Height="450" Width="800" Background="Lavender" Icon="rent-a-car.png">
+        Title="CarControl" Height="450" Width="800" Background="Lavender" Icon="rent-a-car.png" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -23,7 +23,7 @@
         <Button x:Name="Delete" Grid.Column="2" Grid.Row="2" Margin="20" Click="Delete_Click">Удалить</Button>
         <TextBlock Grid.Column="0" Margin="20" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left">Заявки</TextBlock>
         <TextBox x:Name="Search_Number" materialDesign:HintAssist.Hint="Поиск" Grid.Column="1" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-        <ListBox x:Name="autoList" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="20 60 20 20 " MouseUp="autoList_MouseUp" x:FieldModifier="public" >
+        <ListBox x:Name="autoList" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="20 60 20 20 " MouseUp="autoList_MouseUp" x:FieldModifier="public" Background="White">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

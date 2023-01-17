@@ -52,8 +52,14 @@ namespace CarControl
                     }
                 }
                 MessageBox.Show($"{find_Car.Count} номеров найдено");
+                Auto_Find auto_find = new Auto_Find(number_car);
+                auto_find.Show();
+                Hide();
             }
             else MessageBox.Show($"Введите номер");
+
+            //Поиск по id
+
             //string number_car = Search_Number.Text;
             //if (number_car != "")
             //{
