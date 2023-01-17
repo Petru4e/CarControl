@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace CarControl
 {
@@ -31,18 +32,19 @@ namespace CarControl
             string model = Model.Text.Trim().ToLower();
             string comment = Comment.Text;
             string start_date = Start_Date.Text;
-            //string date_start = Date_Start.Text;
             string end_date = End_Date.Text;
-            //string date_end = Date_End.Text;
-            if (number.Length < 3)
-            {
-                Number.ToolTip = "Не корректный номер";
-                Number.Background = Brushes.Red;
-            }
-            else
+            Regex regex = new Regex(@"/^[АВЕКМНОРСТУХ]\d{3}(?<!000)[АВЕКМНОРСТУХ]{2}\d{2,3}$/ui");
+            MatchCollection matches = regex.Matches(number);
+            if (matches.Count > 0)
             {
                 Number.ToolTip = "";
                 Number.Background = Brushes.Transparent;
+              
+            }
+            else
+            {
+                Number.ToolTip = "Не корректный номер";
+                Number.Background = Brushes.Red;
             }
 
             
