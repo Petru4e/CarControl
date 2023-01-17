@@ -39,16 +39,31 @@ namespace CarControl
 
         private void Search_Click(object sender, RoutedEventArgs e)
         {
-            string id_car = Search_Number.Text;
-            if (id_car != "")
+            string number_car = Search_Number.Text;
+            if (number_car != "")
             {
-                Car car = db.Cars.Find(Convert.ToInt32(Search_Number.Text));
-                if (car != null)
-                    MessageBox.Show($"{car.id.ToString()} найдено");
-                else
-                    MessageBox.Show($"Не найдено");
+                List<Car> cars = db.Cars.ToList();
+                List<Car> find_Car = new List<Car>();
+                for (int i = 0; i < cars.Count ; i++)
+                {
+                    if (cars[i].Number.Contains(number_car))
+                    {
+                        find_Car.Add(cars[i]);
+                    }
+                }
+                MessageBox.Show($"{find_Car.Count} номеров найдено");
             }
-            else MessageBox.Show($"Введите id");
+            else MessageBox.Show($"Введите номер");
+            //string number_car = Search_Number.Text;
+            //if (number_car != "")
+            //{
+            //    Car car = db.Cars.Find(Convert.ToInt32(Search_Number.Text));
+            //    if (car != null)
+            //        MessageBox.Show($"{car.id.ToString()} найдено");
+            //    else
+            //        MessageBox.Show($"Не найдено");
+            //}
+            //else MessageBox.Show($"Введите id");
 
 
 

@@ -19,7 +19,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Button x:Name="Add" Grid.Column="2" Grid.Row="1" Margin="20" Click="Add_Click">Добавить</Button>
-        <Button x:Name="Search" Grid.Column="2" Grid.Row="0" Margin="20" Click="Search_Click">Поиск по id</Button>
+        <Button x:Name="Search" Grid.Column="2" Grid.Row="0" Margin="20" Click="Search_Click">Поиск по номеру</Button>
         <Button x:Name="Delete" Grid.Column="2" Grid.Row="2" Margin="20" Click="Delete_Click">Удалить</Button>
         <TextBlock Grid.Column="0" Margin="20" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left">Заявки</TextBlock>
         <TextBox x:Name="Search_Number" materialDesign:HintAssist.Hint="Поиск" Grid.Column="1" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>

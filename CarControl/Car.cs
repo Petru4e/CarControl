@@ -45,6 +45,7 @@ namespace CarControl
             this.date_start = date_start;
             this.date_end = date_end;
         }
+        
 
     }
 }
