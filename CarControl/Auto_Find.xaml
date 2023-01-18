@@ -13,13 +13,11 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <!--<TextBlock FontSize="16" FontStyle="Italic" FontFamily="Arial Black" FontWeight="Bold"  Text="{Binding id}"></TextBlock>
-                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Number}"></TextBlock>
+                        <TextBlock FontSize="16" FontStyle="Italic" FontFamily="Arial Black" FontWeight="Bold"  Text="{Binding Number}"></TextBlock>
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Model}"></TextBlock>
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Comment}"></TextBlock>
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Date_Start}"></TextBlock>
-                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Date_End}"></TextBlock>-->
-                        <TextBlock FontSize="16" FontStyle="Italic" FontFamily="Arial Black" FontWeight="Bold"  Text="{Binding Number}"></TextBlock>
+                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Date_End}"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
