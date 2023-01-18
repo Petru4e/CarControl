@@ -42,16 +42,16 @@ namespace CarControl
             string number_car = Search_Number.Text;
             if (number_car != "")
             {
-                List<Car> cars = db.Cars.ToList();
-                List<Car> find_Car = new List<Car>();
-                for (int i = 0; i < cars.Count ; i++)
-                {
-                    if (cars[i].Number.Contains(number_car))
-                    {
-                        find_Car.Add(cars[i]);
-                    }
-                }
-                MessageBox.Show($"{find_Car.Count} номеров найдено");
+                //List<Car> cars = db.Cars.ToList();
+                //List<Car> find_Car = new List<Car>();
+                //for (int i = 0; i < cars.Count ; i++)
+                //{
+                //    if (cars[i].Number.Contains(number_car))
+                //    {
+                //        find_Car.Add(cars[i]);
+                //    }
+                //}
+                //MessageBox.Show($"{find_Car.Count} номеров найдено");
                 Auto_Find auto_find = new Auto_Find(number_car);
                 auto_find.Show();
                 Hide();
@@ -83,7 +83,7 @@ namespace CarControl
                 if (autoList.SelectedItem != null)
                 {
                     Car li = (Car)autoList.Items[autoList.SelectedIndex];
-                    MessageBox.Show($"{li.id.ToString()} удалено");
+                    MessageBox.Show($"{li.Number.ToString()} удалено");
 
                     Car car = db.Cars.Find(li.id);
 

@@ -41,6 +41,11 @@ namespace CarControl
                 Number.ToolTip = "Введите номер";
                 Number.Background = Brushes.Red;
             }
+            else if (Regex.IsMatch(number, @"\p{IsCyrillic}"))
+            {
+                Number.ToolTip = "Введите номер используя английскую раскладку клавиатуры";
+                Number.Background = Brushes.Red;
+            }
             else if (model.Length == 0)
             {
                 Model.ToolTip = "Введите марку автомобиля";
@@ -60,11 +65,6 @@ namespace CarControl
             {
                 End_Date.ToolTip = "Введите дату окончания действия заявки";
                 End_Date.Background = Brushes.Red;
-            }
-            else if (Regex.IsMatch(number, @"\p{IsCyrillic}"))
-            {
-                Number.ToolTip = "Введите номер используя английскую раскладку клавиатуры";
-                Number.Background = Brushes.Red;
             }
             else
             {
