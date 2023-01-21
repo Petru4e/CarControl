@@ -21,22 +21,21 @@ namespace CarControl
     public partial class Auto_Add : Window
     {
         AppContext db;
+        public string SelectedValue { get; private set; }
         public Auto_Add()
         {
             InitializeComponent();
             db = new AppContext();
-            RadioButton rb = new RadioButton { IsChecked = true, GroupName = "Applicat", Content = "Гость"};
-            rb.Checked += RadioButton_Checked;
-            stackPanel.Children.Add(rb);
         }
         private void Add_Btn_Click(object sender, RoutedEventArgs e)
         {
+            
             string number = Number.Text.Replace(" ", "").ToUpper();
             string model = Model.Text;
             string comment = Comment.Text;
             string start_date = Start_Date.Text;
             string end_date = End_Date.Text;
-            string category = "++++";
+            string category = SelectedValue;
            
 
             if (number.Length == 0)
@@ -104,8 +103,11 @@ namespace CarControl
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            RadioButton pressed = (RadioButton)sender;
-            MessageBox.Show(pressed.Content.ToString());
+            if (sender is RadioButton item)
+            {
+                SelectedValue = item.Content.ToString();
+            }
+            
         }
     }
 }
