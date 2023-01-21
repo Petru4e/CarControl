@@ -6,9 +6,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarControl"
         mc:Ignorable="d"
-         Title="CarControl" Height="450" Width="800" Background="Lavender" Icon="rent-a-car.png" ResizeMode="NoResize">
+         Title="CarControl" Height="550" Width="500" Background="Lavender" Icon="rent-a-car.png" ResizeMode="NoResize">
     <Grid>
-        <StackPanel Background="White" Margin="40 40 40 80">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="184*"/>
+            <ColumnDefinition Width="309*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="stackPanel" Background="White" Margin="40,40,39.6,79.8" Grid.ColumnSpan="2">
             <TextBox x:Name="Number" materialDesign:HintAssist.Hint="Введите номер автомобиля" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
             <TextBox x:Name="Model" materialDesign:HintAssist.Hint="Введите марку автомобиля" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
             <TextBox x:Name="Comment" materialDesign:HintAssist.Hint="Коментарий" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
@@ -16,7 +20,10 @@
             <DatePicker Name="Start_Date" IsDropDownOpen="True" SelectedDateFormat="Short" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"  Foreground="Gray" />
             <TextBlock Margin="10"  Foreground="Gray">Дата окончания заявки</TextBlock>
             <DatePicker Name="End_Date" IsDropDownOpen="True" SelectedDateFormat="Short" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"  Foreground="Gray"/>
+            <RadioButton GroupName="Applicat" Content="Постоянная заявка" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="Applicat" Content="Временная заявка"  Checked="RadioButton_Checked"/>
+            <!--<RadioButton  GroupName="Application" Content="Гость" Checked="RadioButton_Checked"/>-->
         </StackPanel>
-        <Button x:Name="Add_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" Content="Добавить" Click="Add_Btn_Click" ></Button>
+        <Button x:Name="Add_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="14.522,0,198.6,19.8" Content="Добавить" Click="Add_Btn_Click" Grid.Column="1" ></Button>
     </Grid>
 </Window>

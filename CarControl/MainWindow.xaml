@@ -33,7 +33,7 @@
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Comment}"></TextBlock>
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Date_Start}"></TextBlock>
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Date_End}"></TextBlock>
-                        
+                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Category}"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

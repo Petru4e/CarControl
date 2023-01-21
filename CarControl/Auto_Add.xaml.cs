@@ -25,6 +25,9 @@ namespace CarControl
         {
             InitializeComponent();
             db = new AppContext();
+            RadioButton rb = new RadioButton { IsChecked = true, GroupName = "Applicat", Content = "Гость"};
+            rb.Checked += RadioButton_Checked;
+            stackPanel.Children.Add(rb);
         }
         private void Add_Btn_Click(object sender, RoutedEventArgs e)
         {
@@ -33,8 +36,8 @@ namespace CarControl
             string comment = Comment.Text;
             string start_date = Start_Date.Text;
             string end_date = End_Date.Text;
-            //Regex regex = new Regex(@"/^[АВЕКМНОРСТУХ]\d{3}(?<!000)[АВЕКМНОРСТУХ]{2}\d{2,3}$/ui");
-            //MatchCollection matches = regex.Matches(number);
+            string category = "++++";
+           
 
             if (number.Length == 0)
             {
@@ -82,12 +85,12 @@ namespace CarControl
 
             if((string)Number.ToolTip == "")
             {
-                Car car = new Car(number, model, comment, start_date, end_date);
+                Car car = new Car(number, model, comment, start_date, end_date, category);
 
                 db.Cars.Add(car);
                 db.SaveChanges();
 
-                MessageBox.Show("Добавлено");
+               
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 Hide();
@@ -97,6 +100,12 @@ namespace CarControl
                 MessageBox.Show($"Исправьте замечания");
             }
             
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pressed = (RadioButton)sender;
+            MessageBox.Show(pressed.Content.ToString());
         }
     }
 }

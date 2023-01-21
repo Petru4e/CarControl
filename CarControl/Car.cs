@@ -9,7 +9,8 @@ namespace CarControl
     class Car
     {
        public int id { get; set; }
-        private string number, model, comment, date_start, date_end;
+        private string number, model, comment, date_start, date_end, category;
+        
         public string Number
         {
             get { return number; }
@@ -35,15 +36,21 @@ namespace CarControl
             get { return date_end; }
             set { date_end = value; }
         }
+        public string Category
+        {
+            get { return category; }
+            set { category = value; }
+        }
         public Car() { }
 
-        public Car(string number, string model, string comment, string date_start, string date_end)
+        public Car(string number, string model, string comment, string date_start, string date_end, string category)
         {
             this.number = number;
             this.model = model;
             this.comment = comment;
             this.date_start = date_start;
             this.date_end = date_end;
+            this.category = category;
         }
         
 
