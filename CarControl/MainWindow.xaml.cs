@@ -81,5 +81,56 @@ namespace CarControl
             }
 
         }
+
+        private void Guest_Click(object sender, RoutedEventArgs e)
+        {
+            List<Car> cars = db.Cars.ToList();
+            List<Car> carsGuest = new List<Car>();
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if(cars[i].Category == "Гость")
+                {
+                    carsGuest.Add(cars[i]);
+                }
+            }
+            autoList.ItemsSource = carsGuest;
+        }
+
+        private void Constant_Click(object sender, RoutedEventArgs e)
+        {
+            List<Car> cars = db.Cars.ToList();
+            List<Car> carsConst = new List<Car>();
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].Category == "Постоянная заявка")
+                {
+                    carsConst.Add(cars[i]);
+                }
+            }
+            autoList.ItemsSource = carsConst;
+
+        }
+
+        private void Temporary_Click(object sender, RoutedEventArgs e)
+        {
+            List<Car> cars = db.Cars.ToList();
+            List<Car> carsTemp = new List<Car>();
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].Category == "Временная заявка")
+                {
+                    carsTemp.Add(cars[i]);
+                }
+            }
+            autoList.ItemsSource = carsTemp;
+
+        }
+
+        private void Full_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Hide();
+        }
     }
 }

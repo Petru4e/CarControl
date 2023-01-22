@@ -48,16 +48,6 @@ namespace CarControl
                 Number.ToolTip = "Введите номер используя английскую раскладку клавиатуры";
                 Number.Background = Brushes.Red;
             }
-            else if (model.Length == 0)
-            {
-                Model.ToolTip = "Введите марку автомобиля";
-                Model.Background = Brushes.Red;
-            }
-            else if (comment.Length == 0)
-            {
-                Comment.ToolTip = "Введите коментарий: откуда заявка, кто и когда сформировал";
-                Comment.Background = Brushes.Red;
-            }
             else if (start_date.Length == 0)
             {
                 Start_Date.ToolTip = "Введите дату начала действия заявки";
@@ -72,10 +62,6 @@ namespace CarControl
             {
                 Number.ToolTip = "";
                 Number.Background = Brushes.Transparent;
-                Model.ToolTip = "";
-                Model.Background = Brushes.Transparent;
-                Comment.ToolTip = "";
-                Comment.Background = Brushes.Transparent;
                 Start_Date.ToolTip = "";
                 Start_Date.Background = Brushes.Transparent;
                 End_Date.ToolTip = "";

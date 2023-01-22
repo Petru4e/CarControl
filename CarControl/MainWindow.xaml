@@ -18,16 +18,19 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Add" Grid.Column="2" Grid.Row="1" Margin="20" Click="Add_Click">Добавить</Button>
-        <Button x:Name="Search" Grid.Column="2" Grid.Row="0" Margin="20" Click="Search_Click">Поиск по номеру</Button>
-        <Button x:Name="Delete" Grid.Column="2" Grid.Row="2" Margin="20" Click="Delete_Click">Удалить</Button>
+        <Button x:Name="Guest" Grid.Column="2" Grid.Row="1" Margin="20 0 20 90" Click="Guest_Click" >Гость</Button>
+        <Button x:Name="Constant" Grid.Column="2" Grid.Row="1" Margin="20 40 20 40" Click="Constant_Click">Постоянный</Button>
+        <Button x:Name="Temporary" Grid.Column="2" Grid.Row="1" Margin="20 90 20 0" Click="Temporary_Click">Временный</Button>
+        <Button x:Name="Full" Grid.Column="2" Grid.Row="0" Margin="20 100 20 0" Click="Full_Click" >Все</Button>
+        <Button x:Name="Add" Grid.Column="2" Grid.Row="2" Margin="20 0 20 60" Click="Add_Click" Background="Green">Добавить</Button>
+        <Button x:Name="Search" Grid.Column="2" Grid.Row="0" Margin="20" Click="Search_Click" Background="Blue">Поиск по номеру</Button>
+        <Button x:Name="Delete" Grid.Column="2" Grid.Row="2" Margin="20 40 20 0" Click="Delete_Click" Background="Red">Удалить</Button>
         <TextBlock Grid.Column="0" Margin="20" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left">Заявки</TextBlock>
-        <TextBox x:Name="Search_Number" materialDesign:HintAssist.Hint="Поиск" Grid.Column="1" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
+        <TextBox x:Name="Search_Number" materialDesign:HintAssist.Hint="Поиск" Grid.Column="2" Grid.Row="0" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Center"></TextBox>
         <ListBox x:Name="autoList" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="20 60 20 20 " MouseUp="autoList_MouseUp" x:FieldModifier="public" Background="White">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <!--<TextBlock FontSize="16" FontStyle="Italic" FontFamily="Arial Black" FontWeight="Bold"  Text="{Binding id}"></TextBlock>-->
                         <TextBlock FontSize="16" FontStyle="Italic" FontFamily="Arial Black" FontWeight="Bold"  Text="{Binding Number}"></TextBlock>
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Model}"></TextBlock>
                         <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Comment}"></TextBlock>
