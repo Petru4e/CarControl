@@ -146,9 +146,8 @@ namespace CarControl
 
         private void Full_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            Hide();
+            List<Car> cars = db.Cars.ToList();
+            autoList.ItemsSource = cars;
         }
     }
 }
