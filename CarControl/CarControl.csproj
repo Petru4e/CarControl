@@ -87,10 +87,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Auto_Find.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,9 +98,6 @@
     <Compile Include="AppContext.cs" />
     <Compile Include="Auto_Add.xaml.cs">
       <DependentUpon>Auto_Add.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Auto_Find.xaml.cs">
-      <DependentUpon>Auto_Find.xaml</DependentUpon>
     </Compile>
     <Compile Include="Car.cs" />
     <Compile Include="MainWindow.xaml.cs">

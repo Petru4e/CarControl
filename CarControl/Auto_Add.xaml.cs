@@ -75,7 +75,7 @@ namespace CarControl
                 db.Cars.Add(car);
                 db.SaveChanges();
 
-               
+
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 Hide();

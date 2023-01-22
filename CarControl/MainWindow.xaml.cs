@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
+
 namespace CarControl
 {
     /// <summary>
@@ -33,8 +34,10 @@ namespace CarControl
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             Auto_Add auto_Add = new Auto_Add();
+            auto_Add.Owner = this;
             auto_Add.Show();
             Hide();
+
         }
 
         private void Search_Click(object sender, RoutedEventArgs e)
@@ -42,9 +45,23 @@ namespace CarControl
             string number_car = Search_Number.Text;
             if (number_car != "")
             {
-                Auto_Find auto_find = new Auto_Find(number_car);
-                auto_find.Show();
-                Hide();
+                List<Car> cars = db.Cars.ToList();
+                List<Car> find_Car = new List<Car>();
+                for (int i = 0; i < cars.Count; i++)
+                {
+                    if (cars[i].Number.Contains(number_car))
+                    {
+                        find_Car.Add(cars[i]);
+                    }
+                }
+                if(find_Car.Count==0)
+                {
+                    MessageBox.Show($"Не найдено");
+                }
+                else
+                {
+                    autoList.ItemsSource = find_Car;
+                }
             }
             else MessageBox.Show($"Введите номер");
 
@@ -65,10 +82,11 @@ namespace CarControl
                     db.Cars.Remove(car);
                     db.SaveChanges();
                 }
-
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                Hide();
+                List<Car> cars = db.Cars.ToList();
+                autoList.ItemsSource = cars;
+                //MainWindow mainWindow = new MainWindow();
+                //mainWindow.Show();
+                //Hide();
             }
 
         }

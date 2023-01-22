@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarControl"
         mc:Ignorable="d"
-        Title="CarControl" Height="450" Width="800" Background="Lavender" Icon="rent-a-car.png" ResizeMode="NoResize">
+        Title="CarControl" Height="450" Width="800" Background="Lavender" Icon="rent-a-car.png" ResizeMode="CanResizeWithGrip">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -14,20 +14,21 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="171*"></ColumnDefinition>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="265*"></ColumnDefinition>
+            <ColumnDefinition Width="264*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Guest" Grid.Column="2" Grid.Row="1" Margin="20 0 20 90" Click="Guest_Click" >Гость</Button>
-        <Button x:Name="Constant" Grid.Column="2" Grid.Row="1" Margin="20 40 20 40" Click="Constant_Click">Постоянный</Button>
-        <Button x:Name="Temporary" Grid.Column="2" Grid.Row="1" Margin="20 90 20 0" Click="Temporary_Click">Временный</Button>
-        <Button x:Name="Full" Grid.Column="2" Grid.Row="0" Margin="20 100 20 0" Click="Full_Click" >Все</Button>
-        <Button x:Name="Add" Grid.Column="2" Grid.Row="2" Margin="20 0 20 60" Click="Add_Click" Background="Green">Добавить</Button>
-        <Button x:Name="Search" Grid.Column="2" Grid.Row="0" Margin="20" Click="Search_Click" Background="Blue">Поиск по номеру</Button>
-        <Button x:Name="Delete" Grid.Column="2" Grid.Row="2" Margin="20 40 20 0" Click="Delete_Click" Background="Red">Удалить</Button>
-        <TextBlock Grid.Column="0" Margin="20" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left">Заявки</TextBlock>
-        <TextBox x:Name="Search_Number" materialDesign:HintAssist.Hint="Поиск" Grid.Column="2" Grid.Row="0" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Center"></TextBox>
-        <ListBox x:Name="autoList" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Margin="20 60 20 20 " MouseUp="autoList_MouseUp" x:FieldModifier="public" Background="White">
+        <Button x:Name="Guest" Grid.Column="3" Grid.Row="1" Margin="20.4,9,19.6,99" Click="Guest_Click" >Гость</Button>
+        <Button x:Name="Constant" Grid.Column="3" Grid.Row="1" Margin="20.4,54,19.6,54" Click="Constant_Click">Постоянный</Button>
+        <Button x:Name="Temporary" Grid.Column="3" Grid.Row="1" Margin="20.4,99,19.6,9" Click="Temporary_Click">Временный</Button>
+        <Button x:Name="Full" Grid.Column="3" Grid.Row="0" Margin="20.4,104,19.6,4" Click="Full_Click" >Все</Button>
+        <Button x:Name="Add" Grid.Column="3" Grid.Row="2" Margin="20.4,24,19.6,84" Click="Add_Click" Background="Green">Добавить</Button>
+        <Button x:Name="Search" Grid.Column="3" Grid.Row="0" Margin="20.4,54,19.6,54" Click="Search_Click" Background="Blue">Поиск по номеру</Button>
+        <Button x:Name="Delete" Grid.Column="3" Grid.Row="2" Margin="20.4,74,19.6,34" Click="Delete_Click" Background="Red">Удалить</Button>
+        <TextBlock Grid.Column="0" Margin="20,20,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left">Заявки</TextBlock>
+        <TextBox x:Name="Search_Number" materialDesign:HintAssist.Hint="Поиск" Grid.Column="3" Grid.Row="0" Margin="114.4,20,112.6,0" VerticalAlignment="Top" HorizontalAlignment="Center"></TextBox>
+        <ListBox x:Name="autoList" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="20,60,19.6,20" MouseUp="autoList_MouseUp" x:FieldModifier="public" Background="White">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
