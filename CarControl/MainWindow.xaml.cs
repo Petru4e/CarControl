@@ -34,10 +34,8 @@ namespace CarControl
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             Auto_Add auto_Add = new Auto_Add();
-            auto_Add.Owner = this;
             auto_Add.Show();
             Hide();
-
         }
 
         private void Search_Click(object sender, RoutedEventArgs e)
@@ -84,9 +82,6 @@ namespace CarControl
                 }
                 List<Car> cars = db.Cars.ToList();
                 autoList.ItemsSource = cars;
-                //MainWindow mainWindow = new MainWindow();
-                //mainWindow.Show();
-                //Hide();
             }
 
         }

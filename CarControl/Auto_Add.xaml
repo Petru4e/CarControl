@@ -17,9 +17,9 @@
             <TextBox x:Name="Model" materialDesign:HintAssist.Hint="Введите марку автомобиля" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
             <TextBox x:Name="Comment" materialDesign:HintAssist.Hint="Коментарий" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" ></TextBox>
             <TextBlock Margin="10" Foreground="Gray">Дата создания заявки</TextBlock>
-            <DatePicker Name="Start_Date" IsDropDownOpen="True" SelectedDateFormat="Short" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"  Foreground="Gray" />
+            <DatePicker Name="Start_Date" IsDropDownOpen="False" SelectedDateFormat="Short" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"  Foreground="Gray" />
             <TextBlock Margin="10"  Foreground="Gray">Дата окончания заявки</TextBlock>
-            <DatePicker Name="End_Date" IsDropDownOpen="True" SelectedDateFormat="Short" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"  Foreground="Gray"/>
+            <DatePicker Name="End_Date" IsDropDownOpen="False" SelectedDateFormat="Short" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"  Foreground="Gray"/>
             <RadioButton GroupName="Applicat" Content="Постоянная заявка" Checked="RadioButton_Checked" IsChecked ="True"/>
             <RadioButton GroupName="Applicat" Content="Временная заявка"  Checked="RadioButton_Checked"/>
             <RadioButton  GroupName="Applicat" Content="Гость" Checked="RadioButton_Checked"/>
