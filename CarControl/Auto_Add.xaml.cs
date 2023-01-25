@@ -29,14 +29,14 @@ namespace CarControl
         }
         private void Add_Btn_Click(object sender, RoutedEventArgs e)
         {
-            
+
             string number = Number.Text.Replace(" ", "").ToUpper();
             string model = Model.Text;
             string comment = Comment.Text;
             string start_date = Start_Date.Text;
             string end_date = End_Date.Text;
             string category = SelectedValue;
-           
+
 
             if (number.Length == 0)
             {
@@ -68,7 +68,7 @@ namespace CarControl
                 End_Date.Background = Brushes.Transparent;
             }
 
-            if((string)Number.ToolTip == "")
+            if ((string)Number.ToolTip == "")
             {
                 Car car = new Car(number, model, comment, start_date, end_date, category);
 
@@ -78,13 +78,14 @@ namespace CarControl
 
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
-                Hide();
+                //Hide();
+                Close();
             }
             else
             {
                 MessageBox.Show($"Исправьте замечания");
             }
-            
+
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -93,7 +94,15 @@ namespace CarControl
             {
                 SelectedValue = item.Content.ToString();
             }
-            
+
+        }
+
+        private void Back_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            //Hide();
+            Close();
         }
     }
 }

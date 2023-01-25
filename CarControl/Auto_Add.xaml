@@ -24,6 +24,7 @@
             <RadioButton GroupName="Applicat" Content="Временная заявка"  Checked="RadioButton_Checked"/>
             <RadioButton  GroupName="Applicat" Content="Гость" Checked="RadioButton_Checked"/>
         </StackPanel>
-        <Button x:Name="Add_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="2.4,0,0,19.8" Content="Добавить" Click="Add_Btn_Click" Grid.Column="1" Width="96" ></Button>
+        <Button x:Name="Add_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="33.4,0,0,19.8" Content="Добавить" Click="Add_Btn_Click" Grid.Column="1" Width="96" ></Button>
+        <Button x:Name="Back_Btn" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,96.6,19.8" Content="Вернуться в основное окно" Click="Back_Btn_Click" Grid.Column="1" Width="96" ></Button>
     </Grid>
 </Window>
