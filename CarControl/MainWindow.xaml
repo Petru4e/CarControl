@@ -40,36 +40,7 @@
         <Button x:Name="Delete" Grid.Column="7" Grid.Row="9" Margin="5" Click="Delete_Click" Background="Red" Height="Auto">Удалить</Button>
         <TextBlock Grid.Column="0" Margin="5,5,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Height="26" Width="69">Заявки</TextBlock>
         <TextBox x:Name="Search_Number" materialDesign:HintAssist.Hint="Введите номер авто" FontSize="15" Grid.Column="7" Grid.Row="0" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="50" Width="150"></TextBox>
-        <!--<TextBlock Grid.Column="0" Grid.Row="1" Margin="31,13.6,31.2,12.8" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Width="37">Номер</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="1" Margin="31.8,13.6,31.4,12.8" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Width="36">Марка</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="1" Margin="12.6,13.6,13.8,12.8" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Width="80">Начало заявки</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="1" Margin="5.2,13.6,15.2,12.8" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Width="102">Окончание заявки</TextBlock>
-        <TextBlock Grid.Column="4" Grid.Row="1" Margin="4.8,13.6,148.8,12.8" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Width="68" Grid.ColumnSpan="2">Статус</TextBlock>
-        <TextBlock Grid.Column="5" Grid.Row="1" Margin="13.8,13.6,23.8,12.8" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Width="120">Коментарий</TextBlock>-->
-        <!--<ListBox x:Name="autoList" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="8" Margin="5,5.2,4.8,5" MouseUp="autoList_MouseUp" x:FieldModifier="public" Background="White">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        -->
-        <!--<TextBlock FontSize="16" FontStyle="Italic" FontFamily="Arial Black" FontWeight="Bold"  Text="{Binding Number}"></TextBlock>
-                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Model}"></TextBlock>
-                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Comment}"></TextBlock>
-                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Date_Start}"></TextBlock>
-                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Date_End}"></TextBlock>
-                        <TextBlock FontSize="12" FontWeight="Light"  Text="{Binding Category}"></TextBlock>-->
-        <!--<TextBlock >
-                            <Run FontSize="16" FontStyle="Italic" FontFamily="Arial Black" FontWeight="Bold" Text="{Binding Number}"></Run>
-                            <Run FontSize="12" FontWeight="Light"  Text="{Binding Model}"></Run>
-                            <Run FontSize="12" FontWeight="Light"  Text="{Binding Date_Start}"></Run>
-                            <Run FontSize="12" FontWeight="Light"  Text="{Binding Date_End}"></Run>
-                            <Run FontSize="12" FontWeight="Light"  Text="{Binding Category}"></Run>
-                            <Run FontSize="12" FontWeight="Light"  Text="{Binding Comment}"></Run>
-                        </TextBlock>-->
-        <!--
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>-->
+        
         <DataGrid x:Name="autoList" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" IsReadOnly="True"
     RowBackground="LightGray" AlternatingRowBackground="White" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="9" Margin="5" MouseUp="autoList_MouseUp">
 

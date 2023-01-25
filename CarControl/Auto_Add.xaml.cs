@@ -78,7 +78,6 @@ namespace CarControl
 
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
-                //Hide();
                 Close();
             }
             else
@@ -101,7 +100,6 @@ namespace CarControl
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            //Hide();
             Close();
         }
     }

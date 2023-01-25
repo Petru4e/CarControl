@@ -46,7 +46,6 @@ namespace CarControl
         {
             Auto_Add auto_Add = new Auto_Add();
             auto_Add.Show();
-            //Hide();
             Close();
         }
 
