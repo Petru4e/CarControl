@@ -29,6 +29,17 @@ namespace CarControl
             db = new AppContext();
 
             List<Car> cars = db.Cars.ToList();
+
+            foreach (Car car in cars)
+            {
+                if (DateTime.TryParse(car.Date_End, out DateTime date))
+                {
+                    if (date < DateTime.Now)
+                    {
+                        car.Date_End = "Заявка просрочена";
+                    }
+                }
+            }
             autoList.ItemsSource = cars;
         }
         private void Add_Click(object sender, RoutedEventArgs e)
@@ -52,7 +63,7 @@ namespace CarControl
                         find_Car.Add(cars[i]);
                     }
                 }
-                if(find_Car.Count==0)
+                if (find_Car.Count == 0)
                 {
                     MessageBox.Show($"Не найдено");
                 }
@@ -101,7 +112,7 @@ namespace CarControl
             List<Car> carsGuest = new List<Car>();
             for (int i = 0; i < cars.Count; i++)
             {
-                if(cars[i].Category == "Гость")
+                if (cars[i].Category == "Гость")
                 {
                     carsGuest.Add(cars[i]);
                 }
