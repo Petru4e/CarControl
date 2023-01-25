@@ -70,14 +70,14 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>-->
-        <DataGrid x:Name="autoList" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+        <DataGrid x:Name="autoList" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" IsReadOnly="True"
     RowBackground="LightGray" AlternatingRowBackground="White" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="6" Grid.RowSpan="9" Margin="5" MouseUp="autoList_MouseUp">
 
             <DataGrid.Items>
 
             </DataGrid.Items>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="150" CanUserResize="True"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="200" CanUserResize="True"/>
                 <DataGridTextColumn  Header="Модель" Binding="{Binding Model}" Width="100" CanUserResize="True"/>
                 <DataGridTextColumn Header="Категория" Binding="{Binding Category}" Width="150" CanUserResize="True"/>
                 <DataGridTextColumn Header="Начало" Binding="{Binding Date_Start}" Width="100" CanUserResize="True"/>
